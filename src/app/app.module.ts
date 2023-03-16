@@ -10,20 +10,28 @@ import { LayoutModule } from './layout/layout.module';
 import{HttpClientModule} from '@angular/common/http';
 import { AlumnoFormComponent } from './componentes/alumnos/alumno-form/alumno-form.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { CursoFormComponent } from './cursos/curso-form.component';
+import { ExamenFormComponent } from './examenes/examen-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     AlumnosComponent,
     CursosComponent,
     ExamenesComponent,
-    AlumnoFormComponent
+    AlumnoFormComponent,
+    CursoFormComponent,
+    ExamenFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,13 @@
 import { Asignatura } from "./asignatura";
+import { Generico } from "./generico";
 import { Pregunta } from "./pregunta";
 
-export class Examen {
+export class Examen implements Generico{
     id:number;
     nombre:string;
     fecha:string;
     preguntas:Pregunta[]=[];
-    asignatura:Asignatura;
+    asignaturaPadre:Asignatura= new Asignatura;
+    asignaturaHija:Asignatura= new Asignatura;
     respondido:boolean;
 }
